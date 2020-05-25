@@ -140,7 +140,7 @@ mc = ModelCheckpoint('cnn_covid_pred.h5', monitor='val_loss', save_best_only = T
 # In[9]:
 
 
-epochs = 20
+epochs = 10
 steps_per_epoch = 8
 
 
