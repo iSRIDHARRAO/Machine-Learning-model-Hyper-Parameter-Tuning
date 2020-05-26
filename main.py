@@ -159,8 +159,8 @@ history = classifier.fit_generator(train_generator,
 # In[ ]:
 
 
-training_accuracy = history.history['accuracy'][-1]
-validation_accuracy = history.history['val_accuracy'][-1]
+training_accuracy = history.history['acc'][-1]
+validation_accuracy = history.history['val_acc'][-1]
 print("training_accuracy ", training_accuracy)
 print("validation_accuracy ", validation_accuracy)
 
@@ -172,6 +172,11 @@ print("training_loss", history.history['loss'][-1])
 print("validation_loss", history.history['val_loss'][-1])
 
 
+print('''
+##########################################
+now we go to changing hyperparameters part
+##########################################
+''')
 # In[ ]:
 
 
@@ -186,8 +191,8 @@ for i in range(4):
                              workers=4,
                              validation_data = validation_generator,
                              validation_steps = 10)
-        training_accuracy = history.history['accuracy'][-1]
-        validation_accuracy = history.history['val_accuracy'][-1]
+        training_accuracy = history.history['acc'][-1]
+        validation_accuracy = history.history['val_acc'][-1]
         print("training_accuracy ", training_accuracy)
         print("validation_accuracy ", validation_accuracy)
     else:
@@ -235,8 +240,8 @@ if training_accuracy < 0.95 :
                          validation_data = validation_generator,
                          validation_steps = 10)
     
-    training_accuracy = history.history['accuracy'][-1]
-    validation_accuracy = history.history['val_accuracy'][-1]
+    training_accuracy = history.history['acc'][-1]
+    validation_accuracy = history.history['val_acc'][-1]
     print("training_accuracy ", training_accuracy)
     print("validation_accuracy ", validation_accuracy)
 else:
@@ -278,8 +283,8 @@ else:
                          validation_data = validation_generator,
                          validation_steps = 10)
     
-    training_accuracy = history.history['accuracy'][-1]
-    validation_accuracy = history.history['val_accuracy'][-1]
+    training_accuracy = history.history['acc'][-1]
+    validation_accuracy = history.history['val_acc'][-1]
     print("training_accuracy ", training_accuracy)
     print("validation_accuracy ", validation_accuracy)
 
